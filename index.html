@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Have I Ben Pwned?</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="https://www.thecentereddiv.com/content/images/size/w256h256/2023/09/playing.png">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="container">
+      <div class="logo">
+        <img src="https://www.thecentereddiv.com/content/images/size/w256h256/2023/09/playing.png" alt="Logo" class="logo-img">
+        <a href="#">Have I Ben Pwned?</a>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="https://www.thecentereddiv.com/#/portal/signup">Newsletter</a></li>
+          <li><a href="https://www.thecentereddiv.com/">Blog</a></li>
+          <li><a href="https://www.thecentereddiv.com/about/">About</a></li>
+          <li><a href="https://github.com/paul-e-morfism/have-i-ben-pwned">Source Code</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="banner" id="thankYouBanner">
+  <div>
+    Thanks for the password! You have ben pwned.
+  </div>
+</div>
+
+<section class="hero">
+  <div class="container">
+    <h1>Check if your account has been compromised in a data breach</h1>
+    <form action="#" method="POST">
+      <input type="text" id="passwordInput" name="text" placeholder="<Secure>">
+      <button type="button" onclick="checkPassword()">Check password</button>
+    </form>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <div class="feature">
+      <h2>Tech News</h2>
+      <p>Get alerted about the latest news in tech.</p>
+    </div>
+    <div class="feature">
+      <h2>Programming News</h2>
+      <p>Get alerted about the latest trends in programming.</p>
+    </div>
+    <div class="feature">
+      <h2>Security Education</h2>
+      <p>Learn the no-nounce-sense approach to cryptography.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; The Centered Div by Paul E. Morfism</p>
+  </div>
+</footer>
+
+<script>
+  function checkPassword() {
+    var password = document.getElementById("passwordInput").value;
+    if (password.trim() !== '') {
+      showBanner();
+    } else {
+      alert("Please enter a password.");
+    }
+  }
+
+  function showBanner() {
+    document.getElementById('thankYouBanner').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
